@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Crud Operations</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="w-50 m-auto my-5 my-shadow">
+            <div class="p-5">
+                <div class="text-center mb-4 py-4 my-shadow">
+                    <h1>Add New Product</h1>
+                </div>
+                <label class=" h5 pt-3">Product Name</label>
+                <input type="text" class="input-shadow form-control" id="productName">
+
+                <label class=" h5 pt-3">Product Price</label>
+                <input type="number" class="input-shadow form-control" id="productPrice">
+
+                <label class=" h5 pt-3">Product Description</label>
+                <textarea type="text" class="input-shadow form-control" id="productDes"></textarea>
+
+                <button id="mainBtn" onclick="mainBtnFun()" class="btn btn-outline-primary fw-bold btn-lg w-100 mt-5">Add</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-50 mx-auto py-3">
+        <input onkeyup="search(this.value)" class="form-control" type="text" id="search" placeholder="Search Product...">
+    </div>
+
+    <section>
+        <div class="w-75 m-auto my-5 my-shadow">
+            <table class="table text-center">
+                <thead >
+                    <th class="py-4">Product Name</th>
+                    <th class="py-4">Product Price</th>
+                    <th class="py-4">Product Description</th>
+                    <th class="py-4">Update</th>
+                    <th class="py-4">Delete</th>
+                </thead>
+                <tbody id="tableRow">
+                    
+                </tbody>
+            </table>
+            <div class="mx-auto px-5">
+                <button onclick="clrAll()" class="btn btn-outline-danger fw-bold mb-5 btn-lg w-100 mt-5"><i class="far fa-trash-alt"></i> Delete All </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
